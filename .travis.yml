@@ -1,11 +1,11 @@
-language:python
+language: python
 python:
- - "3.8.3"
-
+  - "3.8.3"
 services:
- - docker
-
-before_script: pip install docker-compose
-
+  - docker 
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+# command to run tests
 script:
- - docker-compose run app sh -c "python manage.py test && flake8"
+  - docker-compose run app sh -c "python manage.py test && flake8"
