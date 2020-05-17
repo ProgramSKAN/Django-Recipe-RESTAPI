@@ -18,5 +18,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/user/',include('user.urls')) #any request that passed in matches 'api/user/' then it will get passed on to 'user/urls'
+    path('api/user/',include('user.urls')), #any request that passed in matches 'api/user/' then it will get passed on to 'user/urls'
+    path('api/recipe/',include('recipe.urls')),
 ]
