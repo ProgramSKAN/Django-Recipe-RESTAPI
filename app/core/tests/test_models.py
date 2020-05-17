@@ -28,3 +28,12 @@ class ModelTests(TestCase):
         with self.assertRaises(ValueError):
             get_user_model().objects.create_user(None,'user1234')
             # anything we run here should raise a value error,if not test fails.
+    
+    def test_create_new_superuser(self):
+        """Test creating a new superuser"""
+        user=get_user_model().objects.create_superuser(
+            'user#gmail.com',
+            'user1234'
+        )
+        self.assertTrue(user.is_superuser) #comes from permissionMixin
+        self.assertTrue(user.is_staff)
