@@ -58,4 +58,13 @@ without docker> python manage.py makemigrations core
 
 #### after adding postgresql in docker and docker-compose
 > docker-compose build
-> docker-compose up
+> docker-compose up >starts a localhost at 127.0.0.1:8000
+
+ or
+
+>python manage.py runserver 0.0.0.0:8000
+
+
+>docker-compose run app sh -c "python manage.py createsuperuser"  :: to create super user
+###### urls
+http://localhost:8000/admin
