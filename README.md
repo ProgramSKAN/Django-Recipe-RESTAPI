@@ -69,5 +69,6 @@ without docker> python manage.py makemigrations core
 ###### urls
 http://localhost:8000/admin
 
-# create users
+# create apps
 new app> docker-compose -rm sh -c "python manage.py startapp user"
+new app> docker-compose -rm sh -c "python manage.py startapp recipe"
