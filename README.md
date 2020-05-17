@@ -55,3 +55,7 @@ with docker> docker-compose run app sh -c "python manage.py makemigrations core"
 without docker> python manage.py makemigrations core
 
 'core' is the app name that you are running migrations on
+
+#### after adding postgresql in docker and docker-compose
+> docker-compose build
+> docker-compose up
