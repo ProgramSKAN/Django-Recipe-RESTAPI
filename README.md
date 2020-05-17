@@ -2,6 +2,8 @@
 python -m django --version
 
 #### Build Docker Image
+https://hub.docker.com/_/python
+
 create docker file 
 > docker build .
 
