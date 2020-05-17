@@ -8,4 +8,4 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - docker-compose run app sh -c "python manage.py test && flake8"
+  - docker-compose run app sh -c "python manage.py test"

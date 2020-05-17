@@ -26,3 +26,16 @@ without docker: run: > django-admin.py startproject app .
 open travis CI and enable this git repo in travis CI
 to tell trabis CI what to do every time we push code to git
 #if the code fails then it will fail the build and sends email notification
+
+.travis.yml
+> language: python
+> python:
+>   - "3.8.3"
+> services:
+>   - docker 
+> # command to install dependencies
+> install:
+>   - pip install -r requirements.txt
+> # command to run tests
+> script:
+>   - docker-compose run app sh -c "python manage.py test && flake8"
