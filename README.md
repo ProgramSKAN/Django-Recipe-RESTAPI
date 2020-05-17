@@ -39,3 +39,6 @@ to tell trabis CI what to do every time we push code to git
 > # command to run tests
 > script:
 >   - docker-compose run app sh -c "python manage.py test && flake8"
+
+#### Test driven development (TDD)
+write test before you write code
