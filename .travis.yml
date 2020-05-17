@@ -1,6 +1,3 @@
-# open travis CI and enable this git repo in travis CI
-# to tell trabis CI what to do every time we push code to git
-#if the code fails then it will fail the build and sends email notification
 language:python
 python:
  - "3.8.3"
@@ -12,4 +9,3 @@ before_script: pip install docker-compose
 
 script:
  - docker-compose run app sh -c "python manage.py test && flake8"
- 
