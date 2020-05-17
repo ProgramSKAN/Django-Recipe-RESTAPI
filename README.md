@@ -42,3 +42,16 @@ to tell trabis CI what to do every time we push code to git
 
 #### Test driven development (TDD)
 write test before you write code
+
+#### place migrations,database in core app
+>python manage.py startapp core
+
+#### to run the test 
+> python manage.py test
+
+#### Migrations
+with docker> docker-compose run app sh -c "python manage.py makemigrations core"
+
+without docker> python manage.py makemigrations core
+
+'core' is the app name that you are running migrations on
