@@ -9,8 +9,18 @@ from rest_framework.test import APIClient
 from core.models import Recipe, Tag, Ingredient
 from recipe.serializers import RecipeSerializer, RecipeDetailSerializer
 
+import tempfile
+import os
+
+from PIL import Image
+
 
 RECIPES_URL = reverse('recipe:recipe-list')
+
+def image_upload_url(recipe_id):
+    """Return URL for recipe image upload"""
+    return reverse('recipe:recipe-upload-image', args=[recipe_id])
+
 def sample_tag(user, name='Main course'):
     """Create and return a sample tag"""
     return Tag.objects.create(user=user, name=name)
