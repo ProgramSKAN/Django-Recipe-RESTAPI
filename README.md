@@ -70,6 +70,7 @@ without docker> python manage.py makemigrations core
 >docker-compose run app sh -c "python manage.py createsuperuser"  :: to create super user
 ###### urls
 http://localhost:8000/admin
+http://localhost:8000/api/recipe/recipes/?ingredients=1&tags=1
 
 # create apps
 new app> docker-compose -rm sh -c "python manage.py startapp user"
