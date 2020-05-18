@@ -71,6 +71,10 @@ without docker> python manage.py makemigrations core
 ###### urls
 http://localhost:8000/admin
 http://localhost:8000/api/recipe/recipes/?ingredients=1&tags=1
+http://localhost:8000/api/recipe/tags/?assigned_only=1
+http://localhost:8000/api/recipe/tags/?assigned_only=0
+http://localhost:8000/api/recipe/ingredients/?assigned_only=1
+http://localhost:8000/api/recipe/ingredients/?assigned_only=0
 
 # create apps
 new app> docker-compose -rm sh -c "python manage.py startapp user"
